@@ -1,0 +1,316 @@
+/* ===== 베이스 ===== */
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f4f9;
+  color: #1e2a39;
+}
+
+/* ===== 공통 푸터 ===== */
+.site-footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+/* ===== 상단 히어로 (index / join / thanks 공통) ===== */
+.hero-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #5a7cf3, #7ca9f7);
+  color: #ffffff;
+}
+
+.hero-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.hero-header p {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.95;
+  line-height: 1.5;
+  max-width: 520px;
+  margin: 0 auto;
+  white-space: pre-line;
+}
+
+/* ===== 공용 카드 컨테이너 (본문 박스) ===== */
+.page-container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 40px auto 80px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 32px 28px;
+  color: #1e2a39;
+  line-height: 1.5;
+}
+
+.page-section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e2a39;
+  margin: 0 0 20px 0;
+}
+
+/* ===== 팀 섹션 / 팀 카드 ===== */
+
+.team-intro {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: #4a5568;
+  margin: 0 0 30px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.member-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.member-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 16px 20px 24px;
+}
+
+.member-info h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e2a39;
+}
+
+.member-info .role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a6da8;
+  margin-bottom: 12px;
+}
+
+.member-info .desc {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.profile-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  background-color: #4a6da8;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.profile-link:hover {
+  background-color: #324f80;
+}
+
+/* ===== 조 합류 섹션 버튼 재사용 ===== */
+
+.primary-btn {
+  display: inline-block;
+  background-color: #5a7cf3;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  min-width: 140px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.primary-btn:hover {
+  background-color: #4466d8;
+}
+
+/* ===== 폼 스타일 (join.html) ===== */
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 640px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e2a39;
+}
+
+.text-input,
+.select-input,
+.textarea-input {
+  width: 100%;
+  border: 1px solid #cfd5e3;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+  color: #1e2a39;
+  background-color: #fdfefe;
+  font-family: inherit;
+}
+
+.text-input:focus,
+.select-input:focus,
+.textarea-input:focus {
+  outline: 2px solid #5a7cf3;
+  outline-offset: 0;
+  border-color: #5a7cf3;
+  background-color: #ffffff;
+}
+
+/* 라디오 / 체크박스 묶음 */
+.option-group {
+  border: 1px solid #cfd5e3;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #fdfefe;
+  max-width: 640px;
+}
+
+.option-group legend {
+  padding: 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e2a39;
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  font-size: 0.9rem;
+  color: #1e2a39;
+  margin-top: 8px;
+}
+
+.option-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.option-row input[type="radio"],
+.option-row input[type="checkbox"] {
+  accent-color: #5a7cf3;
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== thanks.html 결과 ===== */
+.result-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.05rem;
+  line-height: 1.9rem;
+  color: #1e2a39;
+  margin: 0 0 24px 0;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.result-list li {
+  margin-bottom: 10px;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #1e2a39;
+  display: inline-block;
+  min-width: 120px;
+}
+
+
+/* ===== 하단 링크들 ===== */
+.return-links {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.return-links a {
+  color: #4a6da8;
+  text-decoration: none;
+}
+
+.return-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 메인 페이지 하단 Join 섹션 여백 조정 ===== */
+.join-section {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.join-section h2 {
+  margin-bottom: 12px;
+}
+
+.join-section p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 24px;
+}

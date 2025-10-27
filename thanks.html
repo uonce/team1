@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지원해 주셔서 감사합니다 🎉</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- 상단 히어로 -->
+  <header class="hero-header">
+    <h1>지원해 주셔서 감사합니다 🎉</h1>
+    <p>입력하신 내용을 아래에서 다시 한 번 확인하실 수 있습니다.</p>
+  </header>
+
+  <!-- 카드 형태의 본문 -->
+  <main class="page-container">
+    <h2 class="page-section-title">입력하신 내용</h2>
+
+    <div id="result"></div>
+
+    <div class="return-links">
+      <div><a href="join.html">← 다시 입력하기</a></div>
+      <div><a href="index.html">← 조 소개로 돌아가기</a></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 유레카 3기 1조</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const name = params.get("name") || "";
+    const role = params.get("role") || "";
+    const days = params.getAll("days");
+    const style = params.get("style") || "";
+    const intro = params.get("intro") || "";
+
+    // XSS 방지를 위해 < 같은 문자 이스케이프 처리
+    const safeIntro = intro.replace(/</g, "&lt;");
+
+    document.getElementById("result").innerHTML = `
+      <ul class="result-list">
+        <li><span class="result-label">이름:</span> ${name}</li>
+        <li><span class="result-label">희망 포지션:</span> ${role}</li>
+        <li><span class="result-label">가능 요일:</span> ${days.join(", ")}</li>
+        <li><span class="result-label">작업 스타일:</span> ${style}</li>
+        <li><span class="result-label">자기소개:</span> ${safeIntro}</li>
+      </ul>
+    `;
+  </script>
+</body>
+</html>
