@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>저희 조를 소개합니다!</title>
+    <title>1조 소개 페이지</title>
     <style>
         /* --- 기본 스타일 --- */
         body {
@@ -36,69 +36,69 @@
             max-width: 600px;
         }
 
-        /* --- 메인 컨테이너 (Flexbox) --- */
+        /* --- 메인 컨테이너 (리스트) --- */
         main {
             width: 100%;
-            max-width: 1200px;
+            max-width: 700px; /* 리스트이므로 폭을 조금 줄임 */
+        }
+
+        .member-list {
             display: flex;
-            flex-wrap: wrap; /* 화면이 좁아지면 줄바꿈 */
-            justify-content: center; /* 카드 중앙 정렬 */
-            gap: 25px; /* 카드 사이의 간격 */
+            flex-direction: column; /* 아이템을 세로로 나열 */
+            gap: 15px; /* 각 링크 사이의 간격 */
         }
 
-        /* --- 조원 카드 --- */
-        .member-card {
+        /* --- 조원 링크 (핵심) --- */
+        .member-link {
+            display: flex;
+            justify-content: space-between; /* 이름/역할과 화살표를 양 끝으로 */
+            align-items: center; /* 세로 중앙 정렬 */
+            
             background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            width: 280px;
-            text-align: center;
-            padding: 30px;
-            box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            padding: 20px 25px;
+            
+            text-decoration: none; /* 링크 밑줄 제거 */
+            color: inherit; /* 부모 글자색 상속 */
+            
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease; /* 부드러운 효과 */
         }
 
-        .member-card:hover {
-            transform: translateY(-8px); /* 마우스를 올리면 살짝 올라감 */
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        .member-link:hover {
+            transform: translateY(-4px); /* 마우스를 올리면 살짝 올라감 */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-color: #007bff; /* 파란색 테두리로 강조 */
+            color: #0056b3; /* 글자색도 살짝 진하게 */
         }
 
-        /* --- 카드 내부 링크 스타일 --- */
-        .member-card a {
-            text-decoration: none;
-            color: inherit; /* 부모 요소의 글자색 상속 */
-            display: block; /* 링크 영역을 카드 전체로 확장 */
-        }
-
-        /* --- 프로필 이미지 --- */
-        .member-card img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%; /* 원형 이미지 */
-            object-fit: cover; /* 이미지가 찌그러지지 않게 */
-            margin-bottom: 20px;
-            border: 3px solid #eee;
-        }
-
-        /* --- 조원 정보 --- */
-        .member-card h3 {
-            font-size: 1.4rem; /* 22px */
-            margin: 10px 0 5px 0;
+        /* --- 이름 및 역할 --- */
+        .member-info h3 {
+            font-size: 1.3rem; /* 21px */
+            font-weight: 600;
+            margin: 0;
             color: #2c3e50;
         }
 
-        .member-card .role {
+        .member-info p {
             font-size: 1rem; /* 16px */
-            font-weight: 600;
-            color: #007bff; /* 포인트 컬러 */
-            margin-bottom: 10px;
+            color: #555;
+            margin: 5px 0 0 0;
         }
 
-        .member-card .bio {
-            font-size: 0.95rem; /* 15px */
-            color: #666;
-            line-height: 1.5;
+        /* --- 이동 화살표 --- */
+        .arrow {
+            font-size: 1.5rem; /* 24px */
+            font-weight: bold;
+            color: #007bff;
+            transition: transform 0.3s ease;
         }
+
+        .member-link:hover .arrow {
+            transform: translateX(5px); /* 호버 시 화살표가 살짝 움직임 */
+        }
+
     </style>
 </head>
 <body>
@@ -109,39 +109,55 @@
     </header>
 
     <main>
-        <div class="member-card">
-            <a href="member1.html"> <img src="httpsimg.jpg" alt="조원 1 프로필 사진">
-                <h3></h3>
-                <p class="role"></p>
-                <p class="bio"></p>
+        <h1>1조 자기소개 페이지</h1>
+        <div class="member-list">
+            <a href="member1.html" class="member-link"> <div class="member-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <span class="arrow">&rarr;</span>
             </a>
-        </div>
-
-        <div class="member-card">
-            <a href="member2.html"> <img src="httpsimg.jpg" alt="조원 2 프로필 사진">
-                <h3></h3>
-                <p class="role"></p>
-                <p class="bio"></p>
+            <a href="member2.html" class="member-link"> <div class="member-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <span class="arrow">&rarr;</span>
             </a>
-        </div>
-
-        <div class="member-card">
-            <a href="member3.html"> <img src="httpsimg.jpg" alt="조원 3 프로필 사진">
-                <h3></h3>
-                <p class="role"></p>
-                <p class="bio"></p>
+            <a href="member2.html" class="member-link"> <div class="member-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <span class="arrow">&rarr;</span>
             </a>
-        </div>
+            <a href="members/yuwon/index.html" class="member-link" target="_blank"> <div class="member-info">
+                    <h3>송유원</h3>
+                    <p>송유원 자기소개 페이지로 이동~</p>
+                </div>
+                <span class="arrow">&rarr;</span> </a>
 
-        <div class="member-card">
-            <a href="member4.html"> <img src="httpsimg.jpg" alt="조원 4 프로필 사진">
-                <h3></h3>
-                <p class="role"></p>
-                <p class="bio"></p>
+            <a href="member2.html" class="member-link"> <div class="member-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <span class="arrow">&rarr;</span>
             </a>
-        </div>
 
-        </main>
+            <a href="member3.html" class="member-link"> <div class="member-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+            
+            <a href="member4.html" class="member-link"> <div class="member-info">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            </div>
+    </main>
 
 </body>
 </html>
