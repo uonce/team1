@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 자기소개</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Internal CSS -->
+    <style>
+        .intro-box {
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">홈</a></li>
+            <li><a href="about.html">소개</a></li>
+            <li><a href="portfolio.html">포트폴리오</a></li>
+            <li><a href="contact.html">연락처</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <h1>안녕하세요! 👋</h1>
+            <p>백엔드_비대면 이윤경입니다!</p>
+        </header>
+
+        <div class="profile-section">
+            <img src="images/profile.jpg" alt="프로필 사진" width="300" class="profile-img">
+            <div>
+                <h2>이윤경</h2>
+                <!-- Inline CSS 적용 -->
+                <p style="font-size: 20px; color: #333; line-height: 1.8;">
+                    안녕하세요! 저는 현재 유레카 백엔드 수업을 듣고 있으며,  과정을 잘 수료하는 것이 목표입니다.<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="intro-box">
+            <h2>나의 특징</h2>
+            <ul style="font-size: 18px; line-height: 2;">
+                <li>팀워크와 협업을 중요하게 생각합니다</li>
+                <li>맡겨진 일은 책임감있게 완성합니다</li>
+                <li>물 흐르듯이 흘러가는 삶을 살고 있습니다</li>
+            </ul>
+        </div>
+
+        <div class="cta">
+            <h2>더 알아보기</h2>
+            <a href="about.html" class="btn">자세히 보기 →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 이윤경의 자기소개</p>
+    </footer>
+</body>
+</html>
