@@ -1,0 +1,55 @@
+/* 외부 CSS: 모던하고 미니멀한 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    color: #222;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 25px 0;
+    text-align: center;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.content-box {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: center;
+}
+
+.content-box img {
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    padding: 15px;
+    color: #888;
+    font-size: 14px;
+}
+
+a {
+    color: #0078ff;
+}
