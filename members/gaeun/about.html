@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자기소개 | 최가은</title>
+
+    <!-- internal CSS (라이트모드용) -->
+    <style>
+        /* 전체 배경/텍스트 */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* 네비게이션 바 */
+        header {
+            background-color: #ffffff;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .nav-left {
+            font-weight: 600;
+            color: #0ea5e9;
+        }
+
+        .nav-links a {
+            color: #1e293b;
+            text-decoration: none;
+            margin-left: 1rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .nav-links a:hover {
+            background-color: #e0f2fe;
+        }
+
+        /* 메인 콘텐츠 */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            padding: 2rem 1.5rem;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #1e293b;
+        }
+
+        /* Flex 정렬 */
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .text-block {
+            flex: 1 1 250px;
+            min-width: 250px;
+        }
+
+        /* 이미지 영역 */
+        .me-photo {
+            flex: 1 1 200px;
+            max-width: 260px;
+            text-align: center;
+        }
+
+        .me-photo img {
+            width: 100%;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 정보 박스 */
+        .info-box {
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .info-row {
+            margin: 0.4rem 0;
+        }
+
+        /* 목록 스타일 */
+        ul {
+            padding-left: 1.2rem;
+            color: #475569;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            padding: 3rem 1rem 4rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #0ea5e9;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 반응형 대응 */
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-left">💠 Choi Ga-eun</div>
+        <div class="nav-links">
+            <a href="index.html">홈</a>
+            <a href="about.html">자기소개</a>
+            <a href="hobbies.html">취미 & 갤러리</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="flex-row">
+        <div class="text-block">
+            <h1>최가은입니다 🙇‍♀️</h1>
+            <p>
+                저는 소프트웨어학부 4학년에 재학 중이며,
+                Spring Boot 기반의 백엔드 개발을 중점적으로 공부하고 있습니다.
+                데이터베이스 모델링, API 설계, 인증·인가 처리(JWT, 쿠키 기반 인증) 같은
+                “서비스의 뼈대”를 만들 수 있다는 점에서 백엔드의 매력을 느꼈습니다!
+            </p>
+
+            <div class="info-box">
+                <div class="info-row"><strong>이름 :</strong> 최가은</div>
+                <div class="info-row"><strong>전공 :</strong> 소프트웨어학부</div>
+                <div class="info-row"><strong>GitHub :</strong> <a href="https://github.com/eunii2" target="_blank" style="color:#0ea5e9; text-decoration:none;">github.com/eunii2</a></div>
+                <div class="info-row"><strong>관심 분야 :</strong> 백엔드, 데이터 마이닝, DevOPs</div>
+                <div class="info-row"><strong>꿈 :</strong> 아무래도... 돈 많은 백수가 좋아요...</div>
+            </div>
+        </div>
+
+        <figure class="me-photo">
+            <img src="img/coding.jpg" alt="코딩 중인 모습 또는 노트북 이미지" />
+            <figcaption style="font-size:0.8rem; color:#64748b; margin-top:0.5rem;">
+                몽키 코더... 엉어어엉ㅇ
+            </figcaption>
+        </figure>
+    </section>
+
+    <section style="margin-top:2rem;">
+        <h2>내가 좋아하는 개발 포인트 🔧</h2>
+        <ul>
+            <li>에러 로그를 하나씩 추적해서 원인을 찾았을 때 오는 쾌감</li>
+            <li>이게 왜 되지? 근데 왜 잘 되지?</li>
+            <li>팀원들과의 원활한 소통으로 좋은 결과물을 냈을 때 오는 뿌듯함</li>
+            <li>내가 상상한 대로의 결과물이 만들어졌을 때의 성취감</li>
+        </ul>
+    </section>
+
+    <section style="margin-top:2rem;">
+        <h2>내가 목표로 하는 개발자 상 ✨</h2>
+        <p style="color:#475569;">
+            단순히 시키는 대로만 하는 '몽키코더'가 아니라 스스로 생각하고 해결할 수 있는 개발자,<br />
+            유지보수에 용의하고 가독성과 좋은 로직을 짤 수 있는 개발자,<br />
+            팀원들이 믿고 맡길 수 있고, 의사소통 능력이 뛰어난 개발자가 되고 싶습니다~!
+        </p>
+    </section>
+</main>
+
+<footer>
+    이 웹사이트는 HTML/CSS 연습용 개인 소개 페이지입니다.  
+    더 보고 싶으시면 <a href="hobbies.html">취미 & 갤러리 페이지</a>도 방문해 주세요.
+</footer>
+</body>
+</html>
