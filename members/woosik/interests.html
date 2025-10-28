@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김우식 - My Interests</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .interest-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important;
+        }
+
+        .interest-img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .interest-card:hover .interest-img {
+            transform: scale(1.05);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .hero-interests {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">김우식</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                <li class="nav-item"><a class="nav-link active" href="interests.html">My Interests</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero-interests text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-3">My Interests</h1>
+        <p class="lead">제가 열정을 가지고 있는 것들을 소개합니다</p>
+    </div>
+</div>
+
+<!-- Movies Section -->
+<section class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="badge bg-danger p-3" style="font-size: 1.5rem;">🎬 영화</span>
+    </h2>
+    <div class="row g-4">
+        <!-- 체인소맨: 레제편 -->
+        <div class="col-md-4">
+            <div class="card interest-card shadow">
+                <span class="badge bg-danger category-badge">Movie</span>
+                <img src="https://chainsawman.dog/movie_reze/assets/img/top/kv_visual2.jpg"
+                     class="card-img-top interest-img" alt="체인소맨: 레제편 포스터">
+                <div class="card-body">
+                    <h5 class="card-title">체인소맨: 레제편</h5>
+                    <p class="card-text">
+                        인간과 악마의 경계에서 벌어지는 격렬한 전투와 슬픈 감정선이 어우러진 애니메이션.
+                        놀라운 작화와 몰입감 넘치는 스토리가 인상적입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 아노라 -->
+        <div class="col-md-4">
+            <div class="card interest-card shadow">
+                <span class="badge bg-danger category-badge">Movie</span>
+                <img src="https://image.tmdb.org/t/p/original/mwguqSMRCA3NgpPoRsXdFhid25m.jpg"
+                     class="card-img-top interest-img" alt="아노라 포스터">
+                <div class="card-body">
+                    <h5 class="card-title">아노라</h5>
+                    <p class="card-text">
+                        사랑과 욕망, 그리고 선택의 경계에 선 인물들의 이야기.
+                        차분하면서도 깊은 감정선을 따라가게 되는 영화입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- F1 더 무비 -->
+        <div class="col-md-4">
+            <div class="card interest-card shadow">
+                <span class="badge bg-danger category-badge">Movie</span>
+                <img src="https://upload.wikimedia.org/wikipedia/ko/9/93/F1_%EB%8D%94_%EB%AC%B4%EB%B9%84_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg"
+                     class="card-img-top interest-img" alt="F1 더 무비 포스터">
+                <div class="card-body">
+                    <h5 class="card-title">F1 더 무비</h5>
+                    <p class="card-text">
+                        세계 최고의 레이서들이 펼치는 박진감 넘치는 경쟁과 인간적인 드라마.
+                        속도감과 감동이 모두 살아있는 작품입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Food Section -->
+<section class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="badge bg-warning p-3" style="font-size: 1.5rem;">🍜 음식</span>
+    </h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card interest-card shadow">
+                <span class="badge bg-warning category-badge">Food</span>
+                <img src="images/ramen.png"
+                     class="card-img-top interest-img" alt="라멘">
+                <div class="card-body">
+                    <h5 class="card-title">라멘</h5>
+                    <p class="card-text">
+                        진한 국물과 쫄깃한 면발이 어우러진 일본 라멘을 좋아합니다.
+                        특히 돈코츠 라멘은 제 최애 메뉴입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card interest-card shadow">
+                <span class="badge bg-warning category-badge">Food</span>
+                <img src="images/pizza.png"
+                     class="card-img-top interest-img" alt="피자">
+                <div class="card-body">
+                    <h5 class="card-title">피자</h5>
+                    <p class="card-text">
+                        바삭한 도우 위에 다양한 토핑을 올려 먹는 즐거움!
+                        마르게리타부터 페퍼로니까지 모두 좋아합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 좋아하는 것 Section -->
+<section class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="badge bg-success p-3" style="font-size: 1.5rem;">❤️ 좋아하는 것</span>
+    </h2>
+    <div class="row g-4">
+        <!-- 축구 -->
+        <div class="col-md-4">
+            <div class="card interest-card shadow">
+                <span class="badge bg-success category-badge">Favorite</span>
+                <img src="images/football.png"
+                     class="card-img-top interest-img" alt="축구">
+                <div class="card-body">
+                    <h5 class="card-title">축구</h5>
+                    <p class="card-text">
+                        팀워크와 전략이 어우러진 최고의 스포츠.
+                        경기 중의 긴장감과 환호성이 매 순간 짜릿합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 레고 -->
+        <div class="col-md-4">
+            <div class="card interest-card shadow">
+                <span class="badge bg-success category-badge">Favorite</span>
+                <img src="images/lego.png"
+                     class="card-img-top interest-img" alt="레고">
+                <div class="card-body">
+                    <h5 class="card-title">레고</h5>
+                    <p class="card-text">
+                        색과 블록을 조합해 자신만의 세상을 만드는 창의적인 취미.
+                        집중하면서 힐링할 수 있는 시간이 됩니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 수족관 -->
+        <div class="col-md-4">
+            <div class="card interest-card shadow">
+                <span class="badge bg-success category-badge">Favorite</span>
+                <img src="images/turtle.png"
+                     class="card-img-top interest-img" alt="수족관">
+                <div class="card-body">
+                    <h5 class="card-title">수족관</h5>
+                    <p class="card-text">
+                        물 속 생명체들의 조용한 움직임을 보고 있으면 마음이 평온해집니다.
+                        바다 생물의 세계는 언제나 신비롭습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0">&copy; 2025 김우식. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,239 +1,370 @@
-/* 전체 초기화 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Custom styles for Bootstrap 5 version */
 
+/* Body background gradient */
 body {
-    font-family: 'Arial', 'Malgun Gothic', sans-serif;
-    line-height: 1.6;
-    color: #333;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    font-family: 'Arial', 'Malgun Gothic', sans-serif;
 }
 
-/* 네비게이션 */
-nav {
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* Hero Section Gradient */
+.hero-section, .bg-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+.bg-gradient-light {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
 }
 
-nav li {
-    margin: 0;
+/* Navigation customization */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-nav a {
-    display: block;
-    padding: 20px 30px;
-    text-decoration: none;
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    padding: 15px 25px;
+    font-weight: bold;
     color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 60%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: #4CAF50;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Card hover effect */
+.hover-lift {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* Pulse Animation for Profile Image */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.pulse-animation:hover {
+    animation: none;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    transition: width 2s ease-in-out;
+}
+
+/* Feature Icon Animation */
+.feature-icon {
+    transition: all 0.3s ease;
+}
+
+.card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Timeline styling */
+.timeline {
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Accordion customization */
+.accordion-button {
     font-weight: bold;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-    background: #4CAF50;
+.accordion-button:not(.collapsed) {
     color: white;
+    background-color: #4CAF50 !important;
 }
 
-/* 메인 컨테이너 */
-main {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
+.accordion-button:hover {
+    background-color: #f0f8f0;
 }
 
-/* 헤더 */
-.hero {
-    text-align: center;
-    background: white;
-    padding: 60px 20px;
+/* Modal customization */
+.modal-content {
+    border: none;
     border-radius: 15px;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
-.hero h1 {
-    font-size: 3em;
-    color: #4CAF50;
-    margin-bottom: 15px;
+.modal-header {
+    border: none;
 }
 
-.hero p {
-    font-size: 1.5em;
-    color: #666;
+.modal-footer {
+    border: none;
 }
 
-h1 {
-    color: #4CAF50;
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-h2 {
-    color: #4CAF50;
-    margin: 30px 0 20px 0;
-    font-size: 2em;
-}
-
-/* 프로필 이미지 */
-.profile-img {
-    border-radius: 50%;
-    border: 5px solid #4CAF50;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* 카드 레이아웃 */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.card img {
-    border-radius: 8px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    color: #4CAF50;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-}
-
-.card p {
-    color: #666;
-    font-size: 1.1em;
-}
-
-/* 섹션 */
-section {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    margin: 30px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.about-content,
-.skills-section,
-.hobby-section {
-    margin-bottom: 30px;
-}
-
-/* CTA (Call to Action) */
-.cta {
-    text-align: center;
-    background: white;
-    padding: 50px;
-    border-radius: 15px;
-    margin: 40px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.cta h2 {
-    margin-bottom: 30px;
-}
-
-/* 버튼 */
+/* Button hover effects */
 .btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.btn:hover {
-    background: #45a049;
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-success {
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.4);
 }
 
-.nav-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 0;
-    gap: 20px;
+.btn-outline-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.3);
 }
 
-/* 푸터 */
-footer {
-    background: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-    border-radius: 15px 15px 0 0;
+/* Badge animations */
+.badge {
+    transition: all 0.3s ease;
 }
 
-footer p {
-    color: #666;
-    font-size: 1.1em;
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* 반응형 디자인 */
+/* Alert animations */
+.alert {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carousel customization */
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Stat item animation */
+.stat-item {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: scale(1.1);
+}
+
+.stat-item h3 {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover h3 {
+    transform: scale(1.2);
+}
+
+/* Footer social buttons */
+footer .btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+footer .btn:hover {
+    transform: translateY(-5px) rotate(360deg);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    .navbar-nav .nav-link {
+        padding: 12px 20px;
     }
     
-    .hero h1 {
-        font-size: 2em;
+    .display-3 {
+        font-size: 2.5rem;
     }
     
-    .profile-section {
-        flex-direction: column;
+    .display-2 {
+        font-size: 2rem;
     }
     
-    .cards {
-        grid-template-columns: 1fr;
+    .hero-section {
+        padding: 3rem 1rem !important;
     }
-    
-    .nav-buttons {
-        flex-direction: column;
+}
+
+/* Additional utility classes */
+.rounded-4 {
+    border-radius: 20px !important;
+}
+
+/* Custom text colors matching original design */
+.text-success {
+    color: #4CAF50 !important;
+}
+
+.bg-success {
+    background-color: #4CAF50 !important;
+}
+
+.btn-success {
+    background-color: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+    background-color: #45a049 !important;
+    border-color: #45a049 !important;
+}
+
+.border-success {
+    border-color: #4CAF50 !important;
+}
+
+.badge.bg-success {
+    background-color: #4CAF50 !important;
+}
+
+.bg-success.bg-opacity-10 {
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Scroll to top button animation */
+#scrollToTop {
+    animation: fadeInUp 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
-    .btn {
-        width: 100%;
-        text-align: center;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Loading animation for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:hover {
+    opacity: 0.9;
+}
+
+/* Z-index utility */
+.z-index-1 {
+    z-index: 1;
+}
+
+/* Shadow utilities */
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important;
+}
+
+/* Text animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
 }

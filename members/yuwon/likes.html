@@ -5,57 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Likes</title>
     
-    <link rel="stylesheet" href="style_likes.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
-    </head>
+    <link rel="stylesheet" href="style_custom.css">
+    
+</head>
 <body class="likes-page-body">
 
-    <nav class="page-nav">
-        <div class="page-nav-inner">
-            <a href="index.html">Home</a>
+    <nav class="navbar fixed-top bg-white border-bottom">
+        <div class="container" style="max-width: 900px;">
+            <a class="navbar-brand fw-semibold" href="index.html">Home</a>
         </div>
     </nav>
 
-    <div class="likes-container">
+    <div class="container" style="max-width: 900px; padding-top: 100px; padding-bottom: 100px;">
 
-        <div class="section-title">
+        <div class="section-title text-center mb-4">
             <h2 class="gradient-title">Likes</h2>
         </div>
 
-        <div class="gallery-grid">
+        <div class="gallery-grid row g-3">
         
-            <div class="gallery-item">
-                <img src="img/travel1.png" alt="좋아하는 사진 1">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/travel1.png" alt="좋아하는 사진 1" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/travel2.png" alt="좋아하는 사진 2">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/travel2.png" alt="좋아하는 사진 2" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/movie.jpg" alt="좋아하는 사진 8">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/movie.jpg" alt="좋아하는 사진 8" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/kingdom.png" alt="좋아하는 사진 4">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/kingdom.png" alt="좋아하는 사진 4" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/me2.jpg" alt="좋아하는 사진 6">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/me2.jpg" alt="좋아하는 사진 6" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/travel3.png" alt="좋아하는 사진 3">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/travel3.png" alt="좋아하는 사진 3" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/f1.jpg" alt="좋아하는 사진 7">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/f1.jpg" alt="좋아하는 사진 7" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/lawschool.jpg" alt="좋아하는 사진 5">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/lawschool.jpg" alt="좋아하는 사진 5" class="img-fluid">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="img/food1.jpg" alt="좋아하는 사진 9">
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/food1.jpg" alt="좋아하는 사진 9" class="img-fluid">
+                </div>
             </div>
         </div>
         
     </div> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <script src="likes.js" defer></script>
 </body>
 </html>
