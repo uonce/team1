@@ -2,35 +2,66 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>소개 | 홍세민</title>
-    <link rel="stylesheet" href="style.css">
+    <title>소개 | 홍세민의 이야기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>나의 이야기</h1>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html">소개</a>
-            <a href="hobby.html">취미</a>
-        </nav>
-    </header>
+<body style="font-family: 'Noto Sans KR', sans-serif;">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 text-primary" href="index.html">홍세민</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-link mx-2 fw-medium" href="index.html">홈</a>
+          <a class="nav-link mx-2 fw-medium active" aria-current="page" href="about.html">소개</a>
+          <a class="nav-link mx-2 fw-medium" href="hobby.html">취미</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <section class="content-box">
-            <h2>🐶 코코</h2>
-            <p>저희집 강아지입니다.<br>
-            아주 귀여워요 😊</p>
-            <img src="images/coco.jpeg" alt="강아지와 사진" width="350">
+<main class="container py-5" style="margin-top: 56px;">
+  <div class="text-center mb-5">
+    <h1 class="fw-bolder display-5 mb-3 text-dark">나의 이야기 📖</h1>
+    <p class="text-muted fs-5">저의 일상, 그리고 목표를 공유합니다.</p>
+  </div>
 
-            <h2>🎯 목표</h2>
-            <p>유레카 과정 수료 후 취업 잘하고 싶습니다!!<br>
-            <img src="images/uplus.jpg" alt="코딩하는 모습" width="350">
-        </section>
-    </main>
+  <div class="row g-5 justify-content-center">
+    <div class="col-lg-5 col-md-6">
+      <div class="card shadow-lg border-0 h-100">
+        <img src="images/coco.jpeg" class="card-img-top object-fit-cover" style="height: 300px;" alt="강아지 코코">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-primary">🐶 코코</h5>
+          <p class="card-text text-muted">저희 집 귀여운 강아지입니다. <br> 하루의 스트레스를 풀어주는 저의 소중한 가족이에요. 😊</p>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p><a href="index.html">← 홈으로</a></p>
-    </footer>
+    <div class="col-lg-5 col-md-6">
+      <div class="card shadow-lg border-0 h-100">
+        <img src="images/uplus.jpg" class="card-img-top object-fit-cover" style="height: 300px;" alt="개발 목표 이미지">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-primary">🎯 목표</h5>
+          <p class="card-text text-muted">유레카 과정을 성공적으로 수료하고, <br> 실력 있는 개발자로 IT 업계에 취업하는 것이 저의 가장 큰 목표입니다!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-outline-secondary">← 홈으로 돌아가기</a>
+  </div>
+</main>
+
+
+  <footer class="text-center py-3 border-top bg-light">
+    <p class="text-muted mb-0">&copy; 2025 Hong Semin | All rights reserved.</p>
+  </footer>
 </body>
 </html>
