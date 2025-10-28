@@ -1,0 +1,113 @@
+/* --- 기본 폰트 설정 --- */
+body {
+    font-family: 'Pretendard';
+    font-weight: 700; /* 폰트 굵기 */
+    line-height: 1.6;
+    color: #333; 
+    background-color: #ffffff;
+}
+
+.container a {
+    color: #555; 
+}
+
+.container a:hover {
+    color: #333; 
+}
+
+/* about.html 연락처 아이콘 */
+.contact-info {
+    padding: 0;
+    margin: 0;
+}
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+.contact-info i {
+    font-size: 1.1rem;
+    color: #d54c34; /* 아이콘 파란색 */
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* about.html 페이지 로드 애니메이션 */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(40px);
+    }
+}
+
+.fade-in-on-load {
+    animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+.fade-in-profile-on-load {
+    animation: fadeInSlideRight 1s ease-out forwards;
+}
+
+
+/* --- likes.html (style_likes.css) --- */
+
+/* "Likes" 그라데이션 제목 */
+.gradient-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(90deg, #e34414, #ff5b2e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 갤러리 아이템 (1:1 비율, 애니메이션) */
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    border-radius: 8px;
+    overflow: hidden;
+
+    /* 1. 초기 상태: (JS가 제어) */
+    opacity: 0;
+    transform: translateY(10px);
+    
+    /* 2. 전환 효과 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 3. 최종 상태: (JS가 .visible 클래스 추가) */
+.gallery-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-out;
+}
+
+/* 이미지 호버 시 확대 */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
