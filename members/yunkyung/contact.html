@@ -4,67 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고양이</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .contact-container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .info-card {
-            text-align: center;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 10px;
-        }
-    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">홈</a></li>
-            <li><a href="about.html">소개</a></li>
-            <li><a href="portfolio.html">포트폴리오</a></li>
-            <li><a href="contact.html" class="active">고양이</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="index.html">
+                <i class="bi bi-person-circle"></i> YK's Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> 홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-person"></i> 소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html"><i class="bi bi-briefcase"></i> 포트폴리오</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html"><i class="bi bi-heart"></i> 고양이</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <h1>호두</h1>
-        <p style="text-align: center; font-size: 18px; color: #666;">
-            샴 고양이입니다!!!
-        </p>
-
-        <div >
-             <img src="images/hodu.png" alt="호두 사진" width="800" style="display: block; margin: 0 auto; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        </div>
-            </div>
-
-            <div style="margin-top: 40px; padding: 30px; background: #e8f5e9; border-radius: 10px;">
-                <h3 style="text-align: center; color: #4CAF50;">📍 Location</h3>
-                <p style="text-align: center; font-size: 18px;">incheon, South Korea</p>
-            </div>
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Header -->
+        <div class="text-center mb-5" data-aos="fade-down">
+            <h1 class="display-3 text-success">
+                <i class="bi bi-heart-fill"></i> 호두
+            </h1>
+            <p class="lead fs-4">
+                <span class="badge bg-success fs-5 px-4 py-2">샴 고양이</span>
+            </p>
+            <p class="text-muted fs-5">우리 집의 호두는 INTJ 입니다</p>
         </div>
 
-        <div class="nav-buttons">
-            <a href="portfolio.html" class="btn">← 포트폴리오</a>
-            <a href="index.html" class="btn">홈으로 →</a>
+        <!-- Cat Image Carousel -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto" data-aos="zoom-in">
+                <div id="catCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#catCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#catCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#catCarousel" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/hodu3.png" class="d-block w-100" alt="호두 사진 1" style="height: 600px; object-fit: cover;">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>호두</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/hodu2.png" class="d-block w-100" alt="호두 사진 2" style="height: 600px; object-fit: cover;">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                <h5>호두의 매력</h5>
+                                <p>수의사분도 인정한 귀여움</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/hodu1.jpg" class="d-block w-100" alt="호두 사진 3" style="height: 600px; object-fit: cover;">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                        
+                                   <h5>호두의 일상</h5>
+                                <p>편안하게 쉬고 있는 호두</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#catCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#catCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cat Info Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow hover-lift text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-success bg-gradient text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="bi bi-info-circle fs-1"></i>
+                        </div>
+                        <h4 class="card-title text-success mb-3">기본 정보</h4>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2"><i class="bi bi-caret-right-fill text-success"></i> <strong>이름:</strong> 호두</li>
+                            <li class="mb-2"><i class="bi bi-caret-right-fill text-success"></i> <strong>품종:</strong> 샴 고양이</li>
+                            <li class="mb-2"><i class="bi bi-caret-right-fill text-success"></i> <strong>성별:</strong> 남자</li>
+                            <li class="mb-2"><i class="bi bi-caret-right-fill text-success"></i> <strong>나이:</strong> 10살</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow hover-lift text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-gradient text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="bi bi-star fs-1"></i>
+                        </div>
+                        <h4 class="card-title text-primary mb-3">성격</h4>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 애교가 많음</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 큰 소리를 싫어함</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 사람을 좋아하지만 낯가림</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 따뜻한 걸 좋아함</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow hover-lift text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-warning bg-gradient text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="bi bi-heart fs-1"></i>
+                        </div>
+                        <h4 class="card-title text-warning mb-3">좋아하는 것</h4>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2"><i class="bi bi-emoji-smile-fill text-warning"></i> 연어 간식</li>
+                            <li class="mb-2"><i class="bi bi-emoji-smile-fill text-warning"></i> 캣닢 장난감</li>
+                            <li class="mb-2"><i class="bi bi-emoji-smile-fill text-warning"></i> 햇볕 쬐기</li>
+                            <li class="mb-2"><i class="bi bi-emoji-smile-fill text-warning"></i> 이불 속</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-5 text-center bg-success bg-opacity-10">
+                        <i class="bi bi-geo-alt-fill text-success display-1 mb-3"></i>
+                        <h3 class="text-success mb-3">
+                            <i class="bi bi-house-heart-fill"></i> Location
+                        </h3>
+                        <p class="fs-4 mb-0">Incheon, South Korea</p>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="bg-gradient-light rounded-4 p-5 mb-5" data-aos="fade-up">
+            <h3 class="text-success text-center mb-4">
+                <i class="bi bi-lightbulb-fill"></i> 호두에 대한 재미있는 사실
+            </h3>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="alert alert-success mb-0">
+                        <i class="bi bi-1-circle-fill"></i> 코를 크게 골아요
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-info mb-0">
+                        <i class="bi bi-2-circle-fill"></i> 입맛이 까다롭습니다
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-warning mb-0">
+                        <i class="bi bi-3-circle-fill"></i> 쿠션 위에 앉는 걸 좋아해요
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-danger mb-0">
+                        <i class="bi bi-4-circle-fill"></i> 노트북만 키면 달려와요
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info with Accordion -->
+        <div class="accordion mb-5" id="contactAccordion" data-aos="fade-up">
+            <div class="accordion-item border-0 shadow-sm mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContact">
+                        <i class="bi bi-envelope-fill me-2"></i> 더 많은 호두 사진이 궁금하신가요?
+                    </button>
+                </h2>
+                <div id="collapseContact" class="accordion-collapse collapse show" data-bs-parent="#contactAccordion">
+                    <div class="accordion-body">
+                        <p>호두의 일상이 궁금하시다면 언제든지 연락주세요!</p>
+                        <div class="d-flex gap-3 justify-content-center">
+                            <a href="#" class="btn btn-success">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="d-flex justify-content-between gap-3" data-aos="fade-up">
+            <a href="portfolio.html" class="btn btn-outline-success btn-lg rounded-pill px-4">
+                <i class="bi bi-arrow-left"></i> 포트폴리오
+            </a>
+            <a href="index.html" class="btn btn-success btn-lg rounded-pill px-4">
+                홈으로 <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 이윤경의 자기소개</p>
+    <!-- Footer -->
+    <footer class="bg-white mt-5 py-4 border-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-secondary mb-0">
+                        <i class="bi bi-c-circle"></i> 2025 이윤경의 자기소개
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle me-2">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle me-2">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-secondary btn-sm rounded-circle">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        // Auto play carousel
+        var carousel = new bootstrap.Carousel(document.getElementById('catCarousel'), {
+            interval: 3000,
+            wrap: true
+        });
+    </script>
 </body>
 </html>
