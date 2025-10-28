@@ -1,55 +1,222 @@
-/* 외부 CSS: 모던하고 미니멀한 스타일 */
+/* Custom CSS for a clean, sophisticated look with new color palette */
+
+/* Color Palette: 
+   Main Background: #F8F8FA (Very Light Grey)
+   Hero Background: #FFFFFF (Pure White)
+   About Section Background: #F8F8FA (Very Light Grey - same as main body but explicitly set for clarity)
+   Primary Color (Buttons, Text, Navbar Active): #4A90E2 (Sophisticated Blue)
+   Secondary Color (Hover, Accent): #50E3C2 (Mint Green - for subtle highlights/hover)
+   Dark Blue (Text, Footer): #2D4F7F 
+*/
+
+/* Base Styles */
 body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #fafafa;
-    margin: 0;
-    color: #222;
+  background-color: #F8F8FA; /* Main Background */
+  color: #343A40; 
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth; 
 }
 
-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
-    padding: 25px 0;
-    text-align: center;
+/* Custom Border Color for Profile Image */
+.border-custom-primary {
+    border-color: #FFFFFF !important; /* 요청하신 민트 그린 색상 적용 */
 }
 
-nav {
-    margin-top: 8px;
+/* Custom Backgrounds for Section Differentiation */
+.bg-hero-custom {
+    background-color: #FFFFFF !important; /* 기본 배경은 순수 흰색 유지 */
+    position: relative;
+    overflow: hidden; /* 블러 효과가 밖으로 나가지 않도록 */
 }
 
-nav a {
-    text-decoration: none;
-    color: #555;
-    margin: 0 15px;
-    font-weight: 500;
-    font-size: 16px;
+/* 왼쪽 상단 - 하늘색 & 보라색 계열 */
+.bg-hero-custom::before {
+    content: '';
+    position: absolute;
+    top: -50px; /* 중앙 쪽으로 이동 */
+    left: -50px; /* 중앙 쪽으로 이동 */
+    width: 600px; /* 크기 크게 확장 */
+    height: 600px; /* 크기 크게 확장 */
+    background: radial-gradient(circle, #B9D2F5 0%, #b8d5df 100%); 
+    border-radius: 50%;
+    filter: blur(120px); /* 블러를 더 부드럽고 넓게 */
+    opacity: 0.7; 
+    z-index: 0;
 }
 
-.content-box {
-    width: 80%;
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    padding: 30px;
-    text-align: center;
+/* 오른쪽 하단 - 핑크색 & 연주황색 계열 (위치와 크기 확장) */
+.bg-hero-custom::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; /* 중앙 쪽으로 이동 */
+    right: -50px; /* 중앙 쪽으로 이동 */
+    width: 600px; /* 크기 크게 확장 */
+    height: 600px; /* 크기 크게 확장 */
+    background: radial-gradient(circle, #F5B9B9 0%, #F5D2B9 100%); 
+    border-radius: 50%;
+    filter: blur(120px); /* 블러를 더 부드럽고 넓게 */
+    opacity: 0.7; 
+    z-index: 0;
 }
 
-.content-box img {
-    border-radius: 10px;
-    margin: 20px 0;
+/* Hero 섹션 내 콘텐츠가 가장 위에 오도록 z-index 조정 */
+.hero-section .container {
+    position: relative;
+    z-index: 10; 
 }
 
-footer {
-    background-color: #ffffff;
-    border-top: 1px solid #eaeaea;
-    text-align: center;
-    padding: 15px;
-    color: #888;
-    font-size: 14px;
+.bg-about-custom {
+    background-color: #F8F8FA !important; /* Same as body, but explicit */
 }
 
-a {
-    color: #0078ff;
+.bg-main-body { /* For sections that should use the body's default background */
+    background-color: #FFFFFF !important;
+}
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Pretendard', sans-serif;;
+    font-weight: 700;
+}
+
+.display-4, .display-5 {
+    font-weight: 700 !important; 
+    color: #2D4F7F !important; /* Darker blue for prominent titles */
+}
+
+.text-primary {
+    color: #4A90E2 !important; /* Sophisticated Blue primary color */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #F58634; /* Mint Green on hover */
+    border-color: #F58634;
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid #eee;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar-nav .nav-link {
+  color: #6C757D; /* Muted grey for normal links */
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4A90E2 !important; /* Primary color on hover */
+}
+
+.navbar-nav .nav-link.active {
+    color: #4A90E2 !important;
+    font-weight: 700;
+}
+.navbar-nav .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 70%; 
+    height: 3px;
+    background-color: #4A90E2;
+    position: absolute;
+    bottom: -5px;
+    left: 15%;
+    border-radius: 2px;
+}
+
+
+/* Hero Section */
+.hero-section {
+  /* No gradient, solid background for clean look */
+  position: relative;
+}
+
+/* Custom Spacing */
+.py-6 {
+    padding-top: 8rem !important; 
+    padding-bottom: 8rem !important;
+}
+.min-vh-100 { 
+    min-height: 100vh;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 0.8rem; 
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: white; /* Card background explicitly set to white */
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; 
+}
+
+.card-img-top {
+    height: 300px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #eee; 
+}
+
+/* Footer (New Style) */
+.bg-dark-blue {
+    background-color: #2D4F7F !important; /* Dark blue for footer */
+    border-top: none;
+}
+
+.hover-github:hover {
+    color: #F58634 !important; /* Mint Green on hover */
+    text-decoration: underline !important;
+    transition: color 0.2s ease;
+}
+
+/* Back To Top Button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px; 
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    z-index: 1000;
+    opacity: 0; 
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    background-color: #4A90E2; /* Primary color */
+    border-color: #4A90E2;
+}
+
+.back-to-top-btn:hover {
+    background-color: #F58634; /* Mint Green on hover */
+    border-color: #F58634;
+    transform: translateY(-3px); 
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Smooth anchor scrolling */
+html {
+    scroll-behavior: smooth;
 }
